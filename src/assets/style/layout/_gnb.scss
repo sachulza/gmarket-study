@@ -1,0 +1,323 @@
+.layout-gnb-wrap {
+  position: relative;
+  background-color: #fff;
+  z-index: 99;
+
+  .layout-full-width {
+    border-bottom: 1px solid #bbb;
+
+    .gnb-wrap {
+      @include flexYCenter;
+
+      .gnb-container {
+        position: relative;
+        @include flexYCenter;
+        width: 150px;
+        height: 60px;
+        z-index: 100;
+
+        button {
+          @include flexYCenter;
+          gap: 8px;
+          font-size: 16px;
+
+          &::before {
+            display: inline-flex;
+            align-items: center;
+            content: "";
+            background: url(//pics.gmarket.co.kr/pc/sprite/kr/common/sprite__common.png)
+              no-repeat;
+            background-size: 400px auto;
+            background-position: -280px -40px;
+            vertical-align: middle;
+            width: 26px;
+            height: 21px;
+            text-indent: -9999px;
+          }
+
+          &.active {
+            &::before {
+              background: url(/src/assets/images/icon/close.svg) no-repeat;
+              background-position: unset;
+              height: 26px;
+            }
+          }
+        }
+      }
+
+      .divider-vertical {
+        display: inline-flex;
+        margin-right: 20px;
+        width: 1px;
+        height: 16px;
+        background-color: #bbb;
+      }
+
+      .link-pages {
+        @include flexYCenter;
+        gap: 20px;
+
+        li {
+          position: relative;
+
+          .new-item {
+          }
+        }
+      }
+      .user-menu-wrap {
+        @include flexYCenter;
+
+        & > li {
+          @include flex {
+            align-items: center;
+          }
+          position: relative;
+          gap: 5px;
+          font-size: 14px;
+
+          &:not(:first-child) {
+            &::before {
+              content: "";
+              width: 1px;
+              height: 14px;
+              margin-left: 5px;
+              background-color: #bbb;
+            }
+          }
+
+          .language-change {
+            &::after {
+              display: inline-block;
+              content: "";
+              background: url(//pics.gmarket.co.kr/pc/sprite/kr/common/sprite__common.png)
+                no-repeat;
+              background-size: 400px auto;
+              text-indent: -9999px;
+              width: 6px;
+              height: 4px;
+              margin-left: 5px;
+              vertical-align: middle;
+              background-position: -378px -24px;
+            }
+
+            &.active {
+              &::after {
+                background-position: -386px -24px;
+              }
+            }
+          }
+          .language-wrap {
+            @include flexColumn;
+            position: absolute;
+            top: 120%;
+            right: 0;
+            border: 1px solid #666;
+            background-color: #fff;
+            display: none;
+
+            &.active {
+              display: flex;
+            }
+
+            li {
+              text-align: center;
+              width: 108px;
+              height: 46px;
+              padding: 11px 0 13px 0;
+
+              &:not(last-child) {
+                border-bottom: 1px solid #eee;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //   gnb 시작
+  .expand-gnb-wrap {
+    position: absolute;
+    width: 100%;
+    display: none;
+    z-index: 101;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+
+    &.active {
+      display: block;
+    }
+
+    .categoty-wrap {
+      position: relative;
+      @include flex;
+
+      .category-list-main {
+        @include flexColumn;
+        width: 224px;
+
+        .category-container {
+          @include flexYCenter;
+          width: 100%;
+          background-color: #0abb26;
+          border-bottom: 1px solid #bbb;
+
+          &.active {
+            background-color: #fff;
+
+            .depth-1-box {
+              width: 100%;
+              color: #0abb26;
+            }
+          }
+
+          .depth-1-box {
+            @include flexYCenter;
+            width: 100%;
+            height: 44px;
+            padding-left: 20px;
+            font-size: 15px;
+            letter-spacing: -1px;
+            color: #fff;
+          }
+        }
+      }
+
+      .depth-2-wrap {
+        position: absolute;
+        left: 224px;
+        top: 0;
+        @include flexColumn {
+          justify-content: space-between;
+        }
+        height: 100%;
+        display: none;
+
+        &.active {
+          display: flex;
+        }
+
+        .depth-2-column-wrap {
+          @include flex;
+          height: 100%;
+          display: flex;
+
+          .depth-2-column {
+            @include flexColumn;
+            width: 192px;
+            padding-top: 22px;
+            padding-left: 35px;
+            border-right: 1px solid #eee;
+
+            &.ad-box {
+              width: 432px;
+              padding: 30px 35px 0px 35px;
+
+              img {
+                width: 327px;
+                height: 214px;
+                border: 1px solid #eee;
+              }
+
+              .ad-text-wrap {
+                @include flexColumn;
+                margin-top: 17px;
+
+                .ad-tit {
+                  font-size: 17px;
+                  font-weight: bold;
+                  letter-spacing: -1px;
+                  color: #222;
+                }
+
+                .ad-desc {
+                  font-size: 14px;
+                  letter-spacing: -1px;
+                  color: #777;
+                }
+              }
+            }
+
+            .depth-2-title {
+              padding-bottom: 16px;
+              font-weight: bold;
+              letter-spacing: -1px;
+              color: #222;
+            }
+
+            .depth-2-list-wrap {
+              @include flexColumn;
+              gap: 8px;
+
+              .depth-2-list-container {
+                font-size: 14px;
+                letter-spacing: -1px;
+                color: #777;
+              }
+            }
+          }
+        }
+
+        .depth-2-bottom-link {
+          @include flexYCenter;
+          width: 100%;
+          height: 68px;
+          padding-left: 35px;
+          border-top: 1px solid #eee;
+          border-right: 1px solid #eee;
+          background-color: #f8f8f8;
+
+          .shortcut-tit {
+            @include flexYCenter;
+            gap: 2px;
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: -1px;
+            color: #222;
+
+            &::after {
+              display: inline-block;
+              content: "";
+              background: url(//pics.gmarket.co.kr/pc/sprite/kr/common/sprite__common.png)
+                no-repeat;
+              background-size: 400px auto;
+              text-indent: -9999px;
+              width: 8px;
+              height: 13px;
+              margin-left: 4px;
+              background-position: -228px -34px;
+              vertical-align: -1px;
+            }
+          }
+
+          & > ul {
+            @include flexYCenter;
+
+            li {
+              @include flexYCenter;
+              margin-left: 60px;
+              font-size: 14px;
+              color: #067dfd;
+              letter-spacing: -1px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.backdrop-pc {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 60;
+  background-color: rgba(0, 0, 0, 0.3);
+
+  &.active {
+    display: block;
+  }
+}
