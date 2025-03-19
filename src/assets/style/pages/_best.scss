@@ -117,7 +117,9 @@
 
         .category-list {
           .item-box {
-            @include flexColumn;
+            @include flexColumn {
+              align-items: center;
+            }
 
             img {
               width: 68px;

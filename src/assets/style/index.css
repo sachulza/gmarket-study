@@ -2015,6 +2015,7 @@ button {
   justify-content: initial;
   align-items: initial;
   flex-direction: column;
+  align-items: center;
 }
 .page-best-wrap .gmarket-best-wrap .best-category-wrap .category-wrap .category-list .item-box img {
   width: 68px;

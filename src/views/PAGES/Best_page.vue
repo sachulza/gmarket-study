@@ -33,8 +33,12 @@
           <button class="btn-tooltip" @click="toggleTooltip"></button>
         </div>
         <div class="best-category-wrap">
-          <ul class="category-wrap">
-            <li class="category-list">
+          <swiper
+            class="category-wrap"
+            :slides-per-view="12"
+            :space-between="0"
+          >
+            <swiper-slide class="category-list">
               <a href="#" class="item-box">
                 <img
                   src="/src/assets/images/best-category/icon__category-total.jpg"
@@ -42,8 +46,8 @@
                 />
                 <div class="item-name">전체</div>
               </a>
-            </li>
-            <li class="category-list active">
+            </swiper-slide>
+            <swiper-slide class="category-list active">
               <a href="#" class="item-box">
                 <img
                   src="/src/assets/images/best-category/best-01-fresh.png"
@@ -51,8 +55,8 @@
                 />
                 <div class="item-name">신선식품</div>
               </a>
-            </li>
-            <li class="category-list">
+            </swiper-slide>
+            <swiper-slide class="category-list">
               <a href="#" class="item-box">
                 <img
                   src="/src/assets/images/best-category/best-02-pros.png"
@@ -60,8 +64,8 @@
                 />
                 <div class="item-name">가공식품</div>
               </a>
-            </li>
-            <li class="category-list">
+            </swiper-slide>
+            <swiper-slide class="category-list">
               <a href="#" class="item-box">
                 <img
                   src="/src/assets/images/best-category/best-03-necessary.png"
@@ -69,98 +73,106 @@
                 />
                 <div class="item-name">생필품</div>
               </a>
-            </li>
-            <li class="category-list">
+            </swiper-slide>
+            <swiper-slide class="category-list">
               <a href="#" class="item-box">
                 <img
                   src="/src/assets/images/best-category/best-04-kitchen.png"
                   alt=""
                 />
                 <div class="item-name">생활/주방</div>
-              </a>
-            </li>
-            <li class="category-list">
+              </a></swiper-slide
+            >
+            <swiper-slide class="category-list">
               <a href="#" class="item-box">
                 <img
                   src="/src/assets/images/best-category/best-05-pashion.jpg"
                   alt=""
                 />
                 <div class="item-name">패션/잡화</div>
-              </a>
-            </li>
-            <li class="category-list">
+              </a></swiper-slide
+            >
+
+            <swiper-slide class="category-list">
               <a href="#" class="item-box">
                 <img
                   src="/src/assets/images/best-category/best-06-beauty.png"
                   alt=""
                 />
                 <div class="item-name">뷰티</div>
-              </a>
-            </li>
-            <li class="category-list">
+              </a></swiper-slide
+            >
+
+            <swiper-slide class="category-list">
               <a href="#" class="item-box">
                 <img
                   src="/src/assets/images/best-category/best-07-digital.png"
                   alt=""
                 />
                 <div class="item-name">디지털/가전</div>
-              </a>
-            </li>
-            <li class="category-list">
+              </a></swiper-slide
+            >
+
+            <swiper-slide class="category-list">
               <a href="#" class="item-box">
                 <img
                   src="/src/assets/images/best-category/best-08-home.jpg"
                   alt=""
                 />
                 <div class="item-name">가구/홈</div>
-              </a>
-            </li>
-            <li class="category-list">
-              <a href="#" class="item-box">
-                <img
-                  src="/src/assets/images/best-category/best-09-sports.png"
-                  alt=""
-                />
-                <div class="item-name">스포츠/건강</div>
-              </a>
-            </li>
-            <li class="category-list">
+              </a></swiper-slide
+            >
+
+            <swiper-slide class="category-list">
+              <swiper-slide>
+                <a href="#" class="item-box">
+                  <img
+                    src="/src/assets/images/best-category/best-09-sports.png"
+                    alt=""
+                  />
+                  <div class="item-name">스포츠/건강</div>
+                </a></swiper-slide
+              >
+            </swiper-slide>
+            <swiper-slide class="category-list">
               <a href="#" class="item-box">
                 <img
                   src="/src/assets/images/best-category/best-10-hobby.png"
                   alt=""
                 />
                 <div class="item-name">취미/문구/펫</div>
-              </a>
-            </li>
-            <li class="category-list">
+              </a></swiper-slide
+            >
+            <swiper-slide class="category-list">
               <a href="#" class="item-box">
                 <img
                   src="/src/assets/images/best-category/best-11-book.png"
                   alt=""
                 />
                 <div class="item-name">도서/음반</div>
-              </a>
-            </li>
-            <li class="category-list">
+              </a></swiper-slide
+            >
+
+            <swiper-slide class="category-list">
               <a href="#" class="item-box">
                 <img
                   src="/src/assets/images/best-category/best-12-ecoupon.png"
                   alt=""
                 />
                 <div class="item-name">e쿠폰</div>
-              </a>
-            </li>
-            <li class="category-list">
+              </a></swiper-slide
+            >
+
+            <swiper-slide class="category-list">
               <a href="#" class="item-box">
                 <img
                   src="/src/assets/images/best-category/best-13-travel.png"
                   alt=""
                 />
                 <div class="item-name">여행</div>
-              </a>
-            </li>
-          </ul>
+              </a></swiper-slide
+            >
+          </swiper>
         </div>
       </div>
     </div>
@@ -629,6 +641,14 @@ const toggleTooltip = () => {
 const closeTooltip = () => {
   isTooltipActive.value = false;
 };
+
+// swiper
+// import Swiper core and required modules
+import { Navigation } from "swiper/modules";
+// Import Swiper Vue.js components
+import { Swiper, SwiperSlide } from "swiper/vue";
+import "swiper/css";
+import "swiper/css/navigation";
 </script>
 
 <style></style>

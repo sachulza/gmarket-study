@@ -86,7 +86,9 @@
           <ul class="category-list-main">
             <li
               class="category-container"
-              :class="{ active: isActiveCategory === 0 }"
+              :class="{
+                active: isActiveCategory === 0,
+              }"
               @mouseover="setActiveCategory(0)"
               @focus="setActiveCategory(0)"
               @click="setActiveCategory(0)"
