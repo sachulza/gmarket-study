@@ -4,10 +4,6 @@
     <Header />
     <!-- //Header -->
 
-    <!-- GNB  임시 삭제-->
-    <!-- <Gnb /> -->
-    <!-- //GNB -->
-
     <!-- Contents -->
     <div class="layout-contents full">
       <div class="layout-page-wrap">

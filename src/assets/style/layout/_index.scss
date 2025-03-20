@@ -1,5 +1,7 @@
 @import "./header";
+@import "./header-main";
 @import "./gnb";
+@import "./gnbOpen";
 @import "./footer";
 
 // margin/padding
@@ -70,7 +72,7 @@
     align-items: normal;
     justify-content: flex-start;
   }
-  width: 1232px;
+  width: 1200px;
   margin: 0 auto;
 
   @include pc {
