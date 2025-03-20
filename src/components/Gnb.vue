@@ -11,7 +11,7 @@
               :class="{ active: isCategoryOpen }"
               ref="categoryButton"
             >
-              전체 카테고리
+              <span>전체 카테고리</span>
             </button>
           </div>
           <div class="divider-vertical"></div>

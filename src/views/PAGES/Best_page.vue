@@ -1,6 +1,6 @@
 <template>
   <div class="page-best-wrap">
-    <div class="layout-inner">
+    <div class="layout-inner-contents">
       <div class="gmarket-best-wrap">
         <div class="title-wrap">
           <h2 class="best-title">
@@ -35,8 +35,10 @@
         <div class="best-category-wrap">
           <swiper
             class="category-wrap"
-            :slides-per-view="12"
+            :modules="[Navigation]"
+            :slides-per-view="13"
             :space-between="0"
+            :navigation="true"
           >
             <swiper-slide class="category-list">
               <a href="#" class="item-box">
@@ -190,7 +192,7 @@
     </div>
   </div>
   <div class="page-best-item-wrap">
-    <div class="layout-inner" style="max-width: 1132px">
+    <div class="layout-inner-contents">
       <ol class="best-item-grid">
         <li class="item-list">
           <a href="#" class="item-container">

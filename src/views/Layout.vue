@@ -4,8 +4,8 @@
     <Header />
     <!-- //Header -->
 
-    <!-- GNB -->
-    <Gnb />
+    <!-- GNB  임시 삭제-->
+    <!-- <Gnb /> -->
     <!-- //GNB -->
 
     <!-- Contents -->

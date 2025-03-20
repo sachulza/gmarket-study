@@ -77,3 +77,16 @@
     margin: 0 auto;
   }
 }
+
+.layout-inner-contents {
+  @include flexColumn {
+    align-items: normal;
+    justify-content: flex-start;
+  }
+  width: 1132px;
+  margin: 0 auto;
+
+  @include pc {
+    margin: 0 auto;
+  }
+}

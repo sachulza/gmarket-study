@@ -1,13 +1,36 @@
 .layout-gnb-wrap {
-  position: relative;
+  // position: sticky;
+  // top: 10px;
   background-color: #fff;
   z-index: 99;
 
+  .position-setup {
+    position: relative;
+  }
+
   .layout-full-width {
-    border-bottom: 1px solid #bbb;
+    border-bottom: 2px solid #eee;
 
     .gnb-wrap {
       @include flexYCenter;
+
+      &.scrolled {
+        display: none;
+
+        // position: absolute;
+        // bottom: 3px;
+        // width: 1232px;
+        // margin: 0 auto;
+        // z-index: 50;
+        // @include flex {
+        //   justify-content: flex-start;
+        // }
+
+        // div,
+        // ul {
+        //   display: none;
+        // }
+      }
 
       .gnb-container {
         position: relative;
@@ -42,6 +65,10 @@
               height: 26px;
             }
           }
+
+          span.scrolled {
+            display: none;
+          }
         }
       }
 
@@ -59,8 +86,21 @@
 
         li {
           position: relative;
+        }
 
-          .new-item {
+        .new-item {
+          &::after {
+            content: "N";
+            display: inline-flex;
+            position: absolute;
+            font-size: 6px;
+            justify-content: center;
+            align-items: center;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: rgb(255, 136, 0);
+            color: #fff;
           }
         }
       }

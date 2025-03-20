@@ -1,36 +1,73 @@
 .layout-header-wrap {
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 98;
   background-color: #fff;
 
   .header-upr-wrap {
     @include flexYCenter {
       justify-content: space-between;
     }
+    height: 70px;
+
+    .button-category-switch-header {
+      @include flexYCenter;
+      gap: 8px;
+      font-size: 16px;
+      display: none;
+      margin-right: 15px;
+
+      &.scrolled {
+        display: flex;
+        transition: 0.4s ease-in-out;
+      }
+
+      &::before {
+        display: inline-flex;
+        align-items: center;
+        content: "";
+        background: url(//pics.gmarket.co.kr/pc/sprite/kr/common/sprite__common.png)
+          no-repeat;
+        background-size: 400px auto;
+        background-position: -280px -40px;
+        vertical-align: middle;
+        width: 26px;
+        height: 21px;
+        text-indent: -9999px;
+      }
+
+      &.active {
+        &::before {
+          background: url(/src/assets/images/icon/close.svg) no-repeat;
+          background-position: unset;
+          height: 26px;
+        }
+      }
+    }
 
     .logo-container {
       @include flexYCenter;
 
       .logo-gmarket {
-        .testest {
-          overflow: hidden;
-          width: 240px;
-          height: 113px;
-          aspect-ratio: auto 240 / 113;
-          margin: 0 auto;
-        }
+        margin-right: 25px;
 
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
+        .logo-image {
+          content: "";
+          display: block;
+          width: 146px;
+          height: 38px;
+          background-position: 0 0;
+          background: url(//pics.gmarket.co.kr/pc/sprite/kr/common/sprite__common.png)
+            no-repeat;
+          background-size: 400px auto;
+          text-indent: -9999px;
         }
       }
 
       .input-container {
+        @include flex;
         position: relative;
-        width: 553px;
+        width: 580px;
         height: 48px;
 
         input {
@@ -41,8 +78,8 @@
           padding-left: 20px;
           padding-right: 50px;
 
-          &:active {
-            border-color: #067dfd;
+          &:focus {
+            outline-color: #067dfd;
           }
         }
 
@@ -69,14 +106,22 @@
       @include flexYCenter;
 
       .ad-banner {
-        width: 182px;
-        height: 70px;
+        @include flexCenter;
+        margin-top: auto;
         margin-right: 30px;
+
+        &.scrolled {
+          display: none;
+        }
+
+        a {
+          @include flexCenter;
+        }
       }
 
       .mytools-container {
         @include flexYCenter;
-        gap: 20px;
+        gap: 40px;
 
         img {
           width: 40px;
