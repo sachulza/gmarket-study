@@ -64,10 +64,10 @@
                 ref="languageWrap"
               >
                 <li>
-                  <a href="#">English</a>
+                  <button href="#">English</button>
                 </li>
                 <li>
-                  <a href="#">中文</a>
+                  <button href="#">中文</button>
                 </li>
               </ul>
             </li>
