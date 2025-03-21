@@ -36,4 +36,14 @@ export const registerComponents = (app) => {
     "BestMain",
     defineAsyncComponent(() => import("@/components/mainPage/BestMain.vue"))
   );
+
+  app.component(
+    "Col2Left",
+    defineAsyncComponent(() => import("@/components/mainPage/Col2Left.vue"))
+  );
+
+  app.component(
+    "Col2Right",
+    defineAsyncComponent(() => import("@/components/mainPage/Col2Right.vue"))
+  );
 };

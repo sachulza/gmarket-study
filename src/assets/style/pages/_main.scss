@@ -9,7 +9,7 @@
 
       .main-visual-swiper {
         position: absolute;
-        width: 1008px;
+        width: 976;
         height: 402px;
         left: 224px;
         top: 0;
@@ -191,6 +191,289 @@
             }
           }
         }
+
+        [class*="swiper-button"] {
+          top: 35%;
+          color: #fff;
+          width: 42px;
+          height: 42px;
+          overflow: hidden;
+        }
+
+        .swiper-button-prev {
+          left: 0;
+          &::after {
+            display: block;
+            opacity: 1;
+            width: 42px;
+            height: 42px;
+            content: "";
+            background: url(//pics.gmarket.co.kr/pc/sprite/kr/homemain/sprite__homemain.svg)
+              0 0 no-repeat;
+            transition: opacity ease 0.25s;
+          }
+
+          &:hover {
+            &::after {
+              background: url(//pics.gmarket.co.kr/pc/sprite/kr/homemain/sprite__homemain.svg) -454px
+                0 no-repeat;
+            }
+          }
+        }
+
+        .swiper-button-next {
+          right: 0;
+          &::after {
+            display: block;
+            opacity: 1;
+            width: 42px;
+            height: 42px;
+            content: "";
+            background: url(//pics.gmarket.co.kr/pc/sprite/kr/homemain/sprite__homemain.svg) -42px
+              0 no-repeat;
+            transition: opacity ease 0.25s;
+          }
+
+          &:hover {
+            transition: opacity ease 0.25s;
+            &::after {
+              background: url(//pics.gmarket.co.kr/pc/sprite/kr/homemain/sprite__homemain.svg) -496px
+                0 no-repeat;
+              transition: opacity ease 0.25s;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .main-col2-type-wrap {
+    @include flex {
+      justify-content: space-between;
+    }
+    padding-top: 64px;
+
+    .col2-type-wrap {
+      @include flexColumn;
+      width: 574px;
+
+      // simple swiper는 전역으로 설정
+
+      .box-lists-wrap {
+        position: relative;
+        padding-top: 80px;
+
+        .box-header-wrap {
+          @include flexYCenter;
+          padding-bottom: 16px;
+
+          &.col-2 {
+            .box-header-container {
+              width: 50%;
+            }
+          }
+
+          &.col-3 {
+            .box-header-container {
+              width: 33.3%;
+            }
+          }
+
+          .box-header-container {
+            position: absolute;
+            top: 20px;
+            @include flexYCenter {
+              justify-content: center;
+            }
+
+            &:not(:first-child) {
+              &::before {
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                content: "";
+                display: inline-flex;
+                width: 2px;
+                height: 16px;
+                background-color: #ececec;
+              }
+            }
+
+            .inner-box {
+              @include flexYCenter;
+              justify-content: center;
+              width: 134px;
+              height: 40px;
+              border-radius: 20px;
+              color: #666;
+              font-size: 16px;
+              background-color: #bdc8d3;
+
+              &.active {
+                color: #fff;
+                background-color: #00c400;
+              }
+            }
+          }
+        }
+
+        .card-box-wrap {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          row-gap: 20px;
+          /* row의 간격을 10px로 */
+          column-gap: 28px;
+          /* column의 간격을 20px로 */
+        }
+
+        .more-btn-wrap {
+        }
+      }
+    }
+  }
+}
+
+// 전역 simple swiper
+.layout-swiper-simple-visual {
+  position: relative;
+
+  .simple-visual-swiper {
+    .swiper-slide {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    [class*="swiper-button"] {
+      color: #fff;
+      width: 23px;
+    }
+
+    .swiper-button-prev {
+      left: 22px;
+
+      &::after {
+        // overflow: hidden;
+        display: inline-block;
+        background: url(//pics.gmarket.co.kr/pc/sprite/kr/homemain/sprite__homemain.svg)
+          no-repeat;
+        line-height: 999px;
+        vertical-align: top;
+        width: 23px;
+        height: 44px;
+        background-position: -88px 0;
+      }
+    }
+
+    .swiper-button-next {
+      right: 22px;
+
+      &::after {
+        // overflow: hidden;
+        display: inline-block;
+        background: url(//pics.gmarket.co.kr/pc/sprite/kr/homemain/sprite__homemain.svg)
+          no-repeat;
+        line-height: 999px;
+        vertical-align: top;
+        width: 23px;
+        height: 44px;
+        background-position: -115px 0;
+      }
+    }
+
+    .simple-container {
+      position: relative;
+      width: 100%;
+      height: 222px;
+      margin-top: 18px;
+      overflow: hidden;
+
+      .contents-wrap {
+        @include flexColumn;
+        gap: 16px;
+        width: 100%;
+        height: 100%;
+        padding: 36px 261px 0 81px;
+        border-radius: 10px;
+        margin-top: auto;
+        overflow: hidden;
+
+        &.emart {
+          background-color: #ffcf03;
+          color: #222;
+
+          .content-logo {
+            width: 88px;
+            height: 22px;
+            background: url(//pics.gmarket.co.kr/mobile/single/kr/common/logo_emartmall.png)
+              0 0 / contain no-repeat;
+          }
+
+          .desc-sub-txt {
+            opacity: 0.6;
+          }
+        }
+
+        &.smile {
+          background-color: #2d8ce6;
+          color: #fff;
+
+          .content-logo {
+            width: 105px;
+            height: 22px;
+            background: url(//pics.gmarket.co.kr/pc/sprite/kr/homemain/sp_homemain_2x.png?v=20220811)
+              no-repeat -41px -24px;
+            background-size: 170px auto;
+          }
+
+          .desc-sub-txt {
+            opacity: 0.9;
+          }
+        }
+
+        .desc-container {
+          @include flexColumn;
+          gap: 10px;
+
+          .desc-main-txt {
+            @include flexColumn;
+
+            span {
+              height: 39px;
+              word-break: break-all;
+              font-size: 30px;
+              letter-spacing: -2px;
+              line-height: 39px;
+              text-align: left;
+            }
+          }
+
+          .desc-sub-txt {
+            font-size: 16px;
+            letter-spacing: -1px;
+          }
+        }
+      }
+
+      .image-wrap {
+        position: absolute;
+        top: 31px;
+        right: 72px;
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+        background-color: #fff;
+
+        img {
+          width: 160px;
+          height: 160px;
+          border-radius: 50%;
+        }
       }
     }
   }
@@ -226,4 +509,72 @@
     height: 18px;
     background-position: 0 -44px;
   }
+}
+
+.ui-card-box-container {
+  @include flex;
+  gap: 16px;
+
+  .card-box-image {
+    flex-shrink: 0;
+    width: 100px;
+    height: 100px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 4px;
+    }
+  }
+
+  .card-box-desc-wrap {
+    @include flexColumn;
+    gap: 6px;
+
+    .box-banner {
+      height: 18px;
+      padding: 0 4px;
+      margin-right: auto;
+      font-size: 12px;
+
+      &.banner-green {
+        background-color: #00c400;
+        color: #fff;
+      }
+      &.banner-orange {
+        background-color: #ff8c05;
+        color: #fff;
+      }
+      &.banner-yellow {
+        background-color: #feca06;
+        color: #fff;
+      }
+      &.banner-blue {
+        background-color: rgba(45, 140, 230, 0.9);
+        color: #fff;
+      }
+    }
+
+    .box-part-name {
+      overflow: hidden;
+      height: 38px;
+      font-size: 14px;
+      color: #444;
+      line-height: 19px;
+    }
+
+    .box-part-price-wrap {
+      .part-price {
+        font-size: 17px;
+        font-weight: bold;
+      }
+      .price-unit {
+        font-size: 14px;
+        color: #424242;
+      }
+    }
+  }
+}
+
+.ui-more-shortcut-wrap {
 }

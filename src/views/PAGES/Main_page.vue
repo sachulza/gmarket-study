@@ -11,9 +11,20 @@
       </div>
     </div>
     <BestMain />
+    <div class="layout-inner">
+      <div class="main-col2-type-wrap">
+        <Col2Left />
+        <Col2Right />
+      </div>
+    </div>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import VisualMain from "@/components/mainPage/VisualMain.vue";
+import BestMain from "@/components/mainPage/BestMain.vue";
+import Col2Left from "@/components/mainPage/Col2Left.vue";
+import Col2Right from "@/components/mainPage/Col2Right.vue";
+</script>
 
 <style></style>
