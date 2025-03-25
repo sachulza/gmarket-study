@@ -17,6 +17,9 @@
         <Col2Right />
       </div>
     </div>
+    <ExpressMain />
+    <GmarketServiceMain />
+    <HomeShoppingMain />
   </div>
 </template>
 
@@ -25,6 +28,9 @@ import VisualMain from "@/components/mainPage/VisualMain.vue";
 import BestMain from "@/components/mainPage/BestMain.vue";
 import Col2Left from "@/components/mainPage/Col2Left.vue";
 import Col2Right from "@/components/mainPage/Col2Right.vue";
+import ExpressMain from "@/components/mainPage/ExpressMain.vue";
+import GmarketServiceMain from "@/components/mainPage/GmarketServiceMain.vue";
+import HomeShoppingMain from "@/components/mainPage/HomeShoppingMain.vue";
 </script>
 
 <style></style>

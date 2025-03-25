@@ -732,7 +732,7 @@
 <script setup>
 import { ref } from "vue";
 
-const isActiveCategory = ref(null);
+const isActiveCategory = ref(0);
 
 const setActiveCategory = (index) => {
   isActiveCategory.value = index;

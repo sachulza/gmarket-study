@@ -46,4 +46,16 @@ export const registerComponents = (app) => {
     "Col2Right",
     defineAsyncComponent(() => import("@/components/mainPage/Col2Right.vue"))
   );
+
+  app.component(
+    "ExpressMain",
+    defineAsyncComponent(() => import("@/components/mainPage/ExpressMain.vue"))
+  );
+
+  app.component(
+    "GmarketServiceMain",
+    defineAsyncComponent(() =>
+      import("@/components/mainPage/GmarketServiceMain.vue")
+    )
+  );
 };
